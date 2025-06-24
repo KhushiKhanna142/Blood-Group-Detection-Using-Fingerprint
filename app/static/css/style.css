@@ -1,0 +1,211 @@
+/* app/static/css/style.css */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #0f172a;
+    color: #f1f5f9;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #cbd5e1;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1e293b;
+    padding: 20px 50px;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #3b82f6;
+  }
+  
+  nav a {
+    margin: 0 15px;
+    font-weight: 500;
+  }
+  
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 50px;
+  }
+  
+  .hero-text {
+    max-width: 600px;
+  }
+  
+  .hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #f8fafc;
+  }
+  
+  .hero-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #cbd5e1;
+    margin-bottom: 30px;
+  }
+  
+  .buttons .btn {
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin-right: 10px;
+  }
+  
+  .btn.primary {
+    background-color: #3b82f6;
+    color: white;
+  }
+  
+  .btn.primary:hover {
+    background-color: #2563eb;
+  }
+  
+  .btn.secondary {
+    background-color: transparent;
+    border: 2px solid #cbd5e1;
+    color: #cbd5e1;
+  }
+  
+  .btn.secondary:hover {
+    background-color: #1e293b;
+  }
+  
+  .hero-image img {
+    width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+  }
+  .form-section {
+    max-width: 400px;
+    margin: 100px auto;
+    background-color: #1e293b;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+    text-align: center;
+  }
+  
+  .form-section h2 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #f8fafc;
+  }
+  
+  .form-section input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #334155;
+    color: white;
+    font-size: 16px;
+  }
+  
+  .form-section input:focus {
+    outline: 2px solid #3b82f6;
+  }
+  
+  .form-footer {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #cbd5e1;
+  }
+  .flash-container {
+    max-width: 600px;
+    margin: 10px auto;
+    text-align: center;
+  }
+  .flash {
+    padding: 12px 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    font-weight: 600;
+  }
+  .flash.success { background-color: #4ade80; color: #052e16; }
+  .flash.error { background-color: #f87171; color: #7f1d1d; }
+  body.dark-body {
+    background-color: #121212;
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container.card {
+    background: #1f1f1f;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.animated-fadein {
+    animation: fadeIn 0.7s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.upload-label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.upload-input {
+    padding: 10px;
+    width: 100%;
+    background: #2a2a2a;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background: #4caf50;
+    border: none;
+    padding: 12px 24px;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #43a047;
+}
+
+.actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.link {
+    color: #90caf9;
+    text-decoration: none;
+}
+
+.link.logout {
+    color: #f48fb1;
+}

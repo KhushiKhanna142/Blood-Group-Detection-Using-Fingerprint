@@ -1,0 +1,42 @@
+<!-- app/templates/result.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prediction Result</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="dark-body">
+
+  <div class="container card animated-fadein">
+    <h2>Prediction Result</h2>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <div class="flash-container">
+          {% for category, message in messages %}
+            <div class="flash {{ category }}">{{ message }}</div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+
+    <p style="font-size: 1.2em;">The predicted blood group is:</p>
+
+    <h1 style="font-size: 2.5em; color: #3b82f6;">{{ prediction }}</h1>
+
+    {% if image_path %}
+    <div style="margin: 20px 0;">
+      <img src="{{ url_for('static', filename='uploads/' ~ image_path) }}" alt="Uploaded Fingerprint" style="width: 200px; border-radius: 12px; box-shadow: 0 0 12px #3b82f6;">
+    </div>
+    {% endif %}
+
+    <div class="actions">
+      <a href="{{ url_for('upload') }}" class="link">← Upload Another</a>
+      <a href="{{ url_for('home') }}" class="link">Home</a>
+      <a href="{{ url_for('logout') }}" class="link logout">Logout</a>
+    </div>
+  </div>
+
+</body>
+</html>

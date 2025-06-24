@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fingerprint Blood Group Detection</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">FINGERBIO</div>
+    <nav>
+      <a href="{{ url_for('home') }}">Home</a>
+      <a href="{{ url_for('about') }}">About</a>
+      <a href="{{ url_for('upload') }}">Upload</a>
+      <a href="{{ url_for('register') }}">Register</a>
+      {% if session.get('user') %}
+        <a href="{{ url_for('logout') }}">Logout</a>
+      {% else %}
+        <a href="{{ url_for('login') }}">Login</a>
+      {% endif %}
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Predict Blood Group<br>From Your Fingerprint</h1>
+      <p>Unlock the power of machine learning and biometric technology for your health.</p>
+      <div class="buttons">
+        <a href="{{ url_for('register') }}" class="btn primary">Get Started</a>
+        <a href="{{ url_for('about') }}" class="btn secondary">Learn More</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="{{ url_for('static', filename='images/fingerprint.jpg') }}" alt="Fingerprint">
+    </div>
+  </section>
+</body>
+</html>
