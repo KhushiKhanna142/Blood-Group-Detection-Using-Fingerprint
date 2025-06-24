@@ -10,7 +10,7 @@ A deep learning project that uses a Convolutional Neural Network (CNN) to predic
 
 ## Dataset
 The dataset used for training was obtained from Kaggle:
-🔗 Fingerprint Based Blood Group Dataset
+🔗Fingerprint-Based Blood Group Dataset: https://www.kaggle.com/datasets/rajumavinmar/finger-print-based-blood-group-dataset
 Please download it separately and place it in the appropriate folder before training.
 
 ## How to Run the Project
