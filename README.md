@@ -8,38 +8,35 @@ A deep learning project that uses a Convolutional Neural Network (CNN) to predic
 - Web interface for uploading fingerprint images and getting predictions.
 - Confusion matrix and performance metrics visualization.
 
-## Project Structure
-project-root/
-├── Scripts/
-│   └── train_model.py
-├── app/
-│   ├── __init__.py
-│   ├── cnn_model.py
-│   ├── model_loader.py
-│   ├── models.py
-│   ├── routes.py
-│   ├── static/
-│   │   ├── css/
-│   │   │   └── style.css
-│   │   ├── images/
-│   │   │   └── fingerprint.jpg
-│   │   └── uploads/
-│   ├── templates/
-│   │   ├── about.html
-│   │   ├── base.html
-│   │   ├── index.html
-│   │   ├── login.html
-│   │   ├── register.html
-│   │   ├── result.html
-│   │   └── upload.html
-│   └── __pycache__/          # Auto-generated Python bytecode files
-│       ├── __init__.cpython-313.pyc
-│       ├── model_loader.cpython-313.pyc
-│       ├── models.cpython-313.pyc
-│       └── routes.cpython-313.pyc
-├── model/
-│   ├── blood_group_model_best.pth
-│   └── class_names.txt
-├── LICENSE
-├── README.md
-└── run.py
+## Dataset
+The dataset used for training was obtained from Kaggle:
+🔗 Fingerprint Based Blood Group Dataset
+Please download it separately and place it in the appropriate folder before training.
+
+## How to Run the Project
+- Clone the Repository
+git clone https://github.com/KhushiKhanna142/Blood-Group-Detection-Using-Fingerprint.git
+cd Blood-Group-Detection-Using-Fingerprint
+
+- Install Dependencies
+pip install -r requirements.txt
+
+- Start the Flask App
+python run.py
+
+- Visit in Browser
+http://localhost:5000
+
+## Model Training
+To train the model run:
+python Scripts/train_model.py
+Ensure the dataset is placed correctly before training.
+
+## 🔐 Authentication
+Simple login and registration system using SQLAlchemy and PostgreSQL.
+Update the SQLALCHEMY_DATABASE_URI in app/__init__.py with your own credentials.
+
+## 📄 License
+This project is licensed under the MIT License.
+See the LICENSE file for more details.
+
